@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<androidx.fragment.app.FragmentContainerView
+    android:layout_width="match_parent"
+    android:id="@+id/FragmentContainer"
+    app:navGraph="@navigation/naw"
+   app:defaultNavHost="true"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    app:layout_constraintBottom_toTopOf="@id/bottomBar"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_height="0dp"/>
+
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:elevation="10dp"
+        app:iconMargin="8dp"
+        app:textSize="15sp"
+        app:textColor="@color/black"
+        app:iconSize="24dp"
+        app:menu="@menu/buttom_naw_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:backgroundColor="#ABD6DC"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
